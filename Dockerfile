@@ -5,7 +5,7 @@ RUN apt-get update; \
     apt-get install -y apt-transport-https language-pack-zh-hans ttf-wqy-microhei; \
     apt-get autoclean; \
     apt-get clean; \
-    apt-get autoremove
+    apt-get autoremove -y
 
 ENV LANG=zh_CN.UTF-8 \
     LC_ALL=zh_CN.UTF-8
@@ -16,7 +16,7 @@ RUN apt-get install -y wget; \
     chmod 777 tmp/BaiduNetdisk_6.7.0.8.exe; \
     apt-get autoclean; \
     apt-get clean; \
-    apt-get autoremove
+    apt-get autoremove -y
     
 # install wine
 RUN apt-get install -y gnupg2; \
@@ -33,4 +33,5 @@ RUN apt-get install -y gnupg2; \
     wget -P /root/.cache/wine https://dl.winehq.org/wine/wine-mono/4.7.1/wine-mono-4.7.1.msi; \
     apt-get autoclean; \
     apt-get clean; \
-    apt-get autoremove
+    apt-get autoremove -y
+
